@@ -23,7 +23,10 @@
 6. Әкімші болжау моделін қайта оқытып, нәтижесін тексереді.
 7. Жүйе енгізілген деректерді тексеріп, қате болса түсінікті хабарлама береді.
 8. Жүйе әр болжау сұрауын деректер қорына сақтайды.
-9. ## \## Құжаттама
-10. ## \- \[Activity: жол апаты қаупін болжау](docs/analysis/activity-predict-road-risk.png)
-11. ## \- \[Sequence: жол апаты қаупін болжау](docs/analysis/sequence-predict-road-risk.png)
+
+## Құжаттама
+
+- [Activity: жол апаты қаупін болжау](docs/analysis/activity-predict-road-risk.png)
+- [Sequence: жол апаты қаупін болжау](docs/analysis/sequence-predict-road-risk.png)
+- 
 
