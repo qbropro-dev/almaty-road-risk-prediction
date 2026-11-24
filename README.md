@@ -27,3 +27,11 @@
 10. ## \- \[Activity: жол апаты қаупін болжау](docs/analysis/activity-predict-road-risk.png)
 11. ## \- \[Sequence: жол апаты қаупін болжау](docs/analysis/sequence-predict-road-risk.png)
 
+
+### Деректерді модельдеу (13 апта)
+* [DFD: контекстік диаграмма](docs/analysis/dfd-context.png)
+* [DFD: 0-деңгей](docs/analysis/dfd-level0.png)
+* [DFD: 1-деңгей](docs/analysis/dfd-level1.png)
+* [ERD: деректер қорының диаграммасы](docs/database/erd.png)
+* [SQL: схема және сұраныстар](docs/database/schema.sql)
+* [SQL: сұраныс нәтижелері](docs/database/query-results.png)
