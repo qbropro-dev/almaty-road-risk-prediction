@@ -26,15 +26,80 @@
 
 ## Құжаттама
 
-- [Activity: жол апаты қаупін болжау](docs/analysis/activity-predict-road-risk.png)
-- [Sequence: жол апаты қаупін болжау](docs/analysis/sequence-predict-road-risk.png)
-- 
+* [Activity: жол апаты қаупін болжау](docs/analysis/activity-predict-road-risk.png)
+* [Sequence: жол апаты қаупін болжау](docs/analysis/sequence-predict-road-risk.png)
+* 
+
 
 
 ### Деректерді модельдеу (13 апта)
+
 * [DFD: контекстік диаграмма](docs/analysis/dfd-context.png)
 * [DFD: 0-деңгей](docs/analysis/dfd-level0.png)
 * [DFD: 1-деңгей](docs/analysis/dfd-level1.png)
 * [ERD: деректер қорының диаграммасы](docs/database/erd.png)
 * [SQL: схема және сұраныстар](docs/database/schema.sql)
 * [SQL: сұраныс нәтижелері](docs/database/query-results.png)
+
+
+
+\## Интерфейс (14 апта)
+
+
+
+\### Экрандар мен навигация
+
+\* \[Навигация диаграммасы](docs/ui/navigation.png)
+
+\* \[1. Кіру экраны](docs/ui/screens/01-login.png)
+
+\* \[2. Басты бет / Карта](docs/ui/screens/02-home.png)
+
+\* \[3. Болжау формасы](docs/ui/screens/03-predict-form.png)
+
+\* \[4. Болжамдар тізімі](docs/ui/screens/04-predictions-list.png)
+
+\* \[5. Статистика және есеп](docs/ui/screens/05-stats.png)
+
+\* \[6. Қате хабарламасы экраны](docs/ui/screens/06-error-alert.png)
+
+\* \[Интерфейсті бағалау](docs/ui/evaluation.md)
+
+
+
+\### Түстер кестесі (`predictions.risk\_level` / `color\_code`)
+
+| Мәртебе (`risk\_level`) | Түс атауы (`color\_code`) | HEX коды | Қолданылуы |
+
+| :--- | :--- | :--- | :--- |
+
+| `Төмен` | Жасыл | `#16A34A` | Қауіпсіз қозғалыс индикаторы |
+
+| `Орташа` | Сары | `#EAB308` | Сақтық шараларын ескерту индикаторы |
+
+| `Жоғары` | Қызыл | `#DC2626` | Жоғары апат қаупі және қате хабарламалары |
+
+| Негізгі әрекет | Көк | `#2563EB` | Негізгі батырмалар және экран тақырыбы |
+
+| Фон / Мәтін | Ақ / Қара-сұр | `#F8FAFC` / `#1E293B` | Жұмыс аймағының фоны және негізгі мәтін |
+
+
+
+\### Сәйкестік кестесі
+
+| Экран | README талабы | SQL кестесі | Қолданылатын бағандар |
+
+| :--- | :--- | :--- | :--- |
+
+| 1. Кіру экраны | Т1, Т7 | — | Пайдаланушы аутентификациясы |
+
+| 2. Басты бет / Карта | Т1, Т2, Т3 | `road\_segments`, `predictions` | `street\_name`, `risk\_level`, `color\_code` |
+
+| 3. Болжау формасы | Т1, Т8 | `predictions` | `segment\_id`, `target\_time`, `risk\_level`, `color\_code`, `alert\_message` |
+
+| 4. Болжамдар тізімі | Т4, Т8 | `predictions`, `road\_segments` | `street\_name`, `target\_time`, `risk\_level`, `color\_code`, `alert\_message` |
+
+| 5. Статистика және есеп | Т4, Т6 | `districts`, `accidents`, `weather\_records` | `name`, `area\_km2`, `accident\_id`, `condition`, `temperature\_c` |
+
+| 6. Қате экраны | Т3, Т7 | `predictions` | `target\_time`, `alert\_message` (валидация қателері) |
+
